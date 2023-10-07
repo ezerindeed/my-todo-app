@@ -1,25 +1,54 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
-function App() {
+import LeftPanel from './components/LeftPanel';
+import MiddlePanel from './components/MiddlePanel';
+import RightPanel from './components/RightPanel';
+import Task from './components/Task'; // Import the updated Task component
+
+const App = () => {
+  const [tasks, setTasks] = useState([]);
+  const [filter, setFilter] = useState('all');
+
+  const addTask = (taskName) => {
+    const newTask = { id: tasks.length + 1, name: taskName, status: 'pending' };
+    setTasks([...tasks, newTask]);
+  };
+
+  const filterTasks = (selectedFilter) => {
+    setFilter(selectedFilter);
+  };
+
+  const completeTask = (taskId) => {
+    setTasks((prevTasks) =>
+      prevTasks.map((task) =>
+        task.id === taskId ? { ...task, status: task.status === 'completed' ? 'pending' : 'completed' } : task
+      )
+    );
+  };
+
+  const deleteTask = (taskId) => {
+    setTasks((prevTasks) => prevTasks.filter((task) => task.id !== taskId));
+  };
+
+  const filteredTasks = filter === 'all' ? tasks : tasks.filter((task) => task.status === filter);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <LeftPanel onAddTask={addTask} onFilterChange={filterTasks} />
+      <MiddlePanel>
+        {filteredTasks.map((task) => (
+          <Task
+            key={task.id}
+            task={task}
+            onCompleteTask={completeTask}
+            onDeleteTask={deleteTask}
+          />
+        ))}
+      </MiddlePanel>
+      {/* Add your RightPanel component here */}
     </div>
   );
-}
+};
 
 export default App;
