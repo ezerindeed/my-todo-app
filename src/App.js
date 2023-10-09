@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css'; // Add your styles
+import './styles/normalize.css';
 
 import LeftPanel from './components/LeftPanel';
 import MiddlePanel from './components/MiddlePanel';
@@ -26,7 +27,6 @@ const App = () => {
     <div className="App">
       <LeftPanel onAddTask={addTask} onFilterChange={filterTasks} />
       <MiddlePanel tasks={filteredTasks} />
-      {/* Add your RightPanel component here */}
     </div>
   );
 };

@@ -19,10 +19,10 @@ const Task = ({ task, onCompleteTask, onDeleteTask }) => {
     <div className='task-card'>
       <div className='task-name'>{name}</div>
       <div className='under'>
-        <div className='task-status'>Status: {status}</div>
+        <div className='task-status'>{status}</div>
         <div className='task-buttons'>
-          <MdDoneAll onClick={handleCompleteClick}>{status === 'completed' ? 'Undo' : 'Complete'}</MdDoneAll>
-          <RiDeleteBin6Line onClick={handleDeleteClick} />
+          <div className='button' onClick={handleCompleteClick}>{status === 'completed' ? 'Undo' : ''} <MdDoneAll /> </div>
+          <div className='button' onClick={handleDeleteClick}><RiDeleteBin6Line /></div>
         </div>
       </div>
     </div>

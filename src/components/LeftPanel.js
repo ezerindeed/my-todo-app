@@ -20,23 +20,26 @@ const LeftPanel = ({ onAddTask, onFilterChange }) => {
 
   return (
     <div className="left-panel">
+      <div className='app-name'>TODO</div>
       <input
         type="text"
         placeholder="Task Name"
         value={taskName}
         onChange={(e) => setTaskName(e.target.value)}
       />
-      <button className="add-btn" onClick={handleAddTask}>Add</button>
-      <h2>Filter Tasks</h2>
-      <button className={selectedFilter === 'all' ? 'active' : ''} onClick={() => handleFilterChange('all')}>
-        All
-      </button>
-      <button className={selectedFilter === 'completed' ? 'active' : ''} onClick={() => handleFilterChange('completed')}>
-        Completed
-      </button>
-      <button className={selectedFilter === 'pending' ? 'active' : ''} onClick={() => handleFilterChange('pending')}>
-        Pending
-      </button>
+      <button onClick={handleAddTask}>Add task</button>
+      <div className='filter'>
+        <h4>Filter Tasks</h4>
+        <div className={selectedFilter === 'all' ? 'active' : ''} onClick={() => handleFilterChange('all')}>
+          All tasks
+        </div>
+        <div className={selectedFilter === 'completed' ? 'active' : ''} onClick={() => handleFilterChange('completed')}>
+          Completed tasks
+        </div>
+        <div className={selectedFilter === 'pending' ? 'active' : ''} onClick={() => handleFilterChange('pending')}>
+          Pending tasks
+        </div>
+      </div>
     </div>
   );
 };
