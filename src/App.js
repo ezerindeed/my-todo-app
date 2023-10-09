@@ -4,6 +4,7 @@ import './styles/normalize.css';
 
 import LeftPanel from './components/LeftPanel';
 import MiddlePanel from './components/MiddlePanel';
+import RightPanel from './components/RightPanel';
 
 const App = () => {
   const [tasks, setTasks] = useState([]);
@@ -15,6 +16,19 @@ const App = () => {
     setTasks([...tasks, newTask]);
   };
 
+  const completeTask = (taskId) => {
+    setTasks((prevTasks) =>
+      prevTasks.map((task) =>
+        task.id === taskId ? { ...task, status: task.status === 'completed' ? 'pending' : 'completed' } : task
+      )
+    );
+  };
+  
+  const deleteTask = (taskId) => {
+    setTasks((prevTasks) => prevTasks.filter((task) => task.id !== taskId));
+  };
+  
+
   // Function to filter tasks based on the selected filter
   const filterTasks = (selectedFilter) => {
     setFilter(selectedFilter);
@@ -25,8 +39,13 @@ const App = () => {
 
   return (
     <div className="App">
-      <LeftPanel onAddTask={addTask} onFilterChange={filterTasks} />
-      <MiddlePanel tasks={filteredTasks} />
+      <LeftPanel 
+      onAddTask={addTask} 
+      onFilterChange={filterTasks} />
+      <MiddlePanel tasks={filteredTasks} 
+      onCompleteTask={completeTask} 
+      onDeleteTask={deleteTask} />
+      <RightPanel />
     </div>
   );
 };

@@ -3,7 +3,7 @@ import Task from './Task';
 
 import '../styles/MiddlePanel.css';
 
-const MiddlePanel = ({ tasks }) => {
+const MiddlePanel = ({ tasks, onCompleteTask, onDeleteTask }) => {
   return (
     <div className="middle-panel">
       <h2>Task List</h2>
@@ -12,7 +12,12 @@ const MiddlePanel = ({ tasks }) => {
       ) : (
         <div className="task-list">
           {tasks.map((task) => (
-            <Task key={task.id} task={task} />
+            <Task 
+              key={task.id} 
+              task={task}
+              onCompleteTask={onCompleteTask} // Pass onCompleteTask directly
+              onDeleteTask={onDeleteTask}     // Pass onDeleteTask directly
+            />
           ))}
         </div>
       )}

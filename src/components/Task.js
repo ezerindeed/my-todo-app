@@ -16,16 +16,22 @@ const Task = ({ task, onCompleteTask, onDeleteTask }) => {
   };
 
   return (
-    <div className='task-card'>
-      <div className='task-name'>{name}</div>
-      <div className='under'>
-        <div className='task-status'>Status: {status}</div>
-        <div className='task-buttons'>
-          <div className='button' onClick={handleCompleteClick}>{status === 'completed' ? 'Undo' : ''} <MdDoneAll /> </div>
-          <div className='button' onClick={handleDeleteClick}><RiDeleteBin6Line /></div>
-        </div>
+<div className='task-card'>
+  <div className='task-name'>{name}</div>
+  <div className='under'>
+    <div className='task-status'>Status: {status}</div>
+    <div className='task-buttons'>
+      <div className='button' onClick={handleCompleteClick}>
+        {status === 'completed' ? '' : ''}
+        <MdDoneAll />
+      </div>
+      <div className='button' onClick={handleDeleteClick}>
+        <RiDeleteBin6Line />
       </div>
     </div>
+  </div>
+</div>
+
   );
 };
 

@@ -76,7 +76,7 @@
     color: #f0f0f0;
 }
 
-.filter div:active, .filter div:focus {
+.filter div.active {
     background-color: #72728fc7;
     color: #f0f0f0;
     border-right: 2px solid #f0f0f0;
