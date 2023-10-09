@@ -19,10 +19,8 @@
 }
 .task-status {
     font-size: 14px;
-    background-color: #8fa2a6;
-    color: #1f3140;
+    color: #8f6c41;
     padding: 2px 4px;
-    border-radius: 10px;
 }
 .task-buttons {
     display: flex;

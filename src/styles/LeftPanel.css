@@ -1,11 +1,27 @@
 .left-panel {
-    width: 15%;
+    position: relative;
+    width: 18%;
     height: 100svh;
     float: left;
-    padding: 20px;
+    padding-top: 20px;
     background-color: #363062; 
     display: flex;
     flex-direction: column;
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-panel .app-name {
+    font-size: 14px;
+    color: #c0c0c0;
+    margin-bottom: 20px;
+}
+
+.left-panel .add-task {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .left-panel input {
@@ -17,7 +33,7 @@
     border-radius: 5px;
     margin-bottom: 10px;
     background-color: #9393b4cf;
-    color: #d38422;
+    color: #6c420e;
     border: none;
 }
 
@@ -32,13 +48,36 @@
     border-radius: 5px;
     border: none;
 }
-.filter{
+
+.left-panel button:hover {
+    background-color: #c27d28;
+}
+
+.filter h4 {
+    color: #c0c0c0;
+    display: flex;
+    align-self: flex-end;
+    margin-left: 20px;
+}
+
+.filter div{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     color: #c0c0c0;
-}
-.filter div{
+    padding: 0 20px;
     margin: 10px 0;
+    height: 40px;
     font-size: 14px;
+    cursor: default;
+}
+
+.filter div:hover {
+    color: #f0f0f0;
+}
+
+.filter div:active, .filter div:focus {
+    background-color: #72728fc7;
+    color: #f0f0f0;
+    border-right: 2px solid #f0f0f0;
 }

@@ -21,23 +21,25 @@ const LeftPanel = ({ onAddTask, onFilterChange }) => {
   return (
     <div className="left-panel">
       <div className='app-name'>TODO</div>
-      <input
-        type="text"
-        placeholder="Task Name"
-        value={taskName}
-        onChange={(e) => setTaskName(e.target.value)}
-      />
-      <button onClick={handleAddTask}>Add task</button>
+      <div className='add-task'>
+        <input
+          type="text"
+          placeholder="Task Name"
+          value={taskName}
+          onChange={(e) => setTaskName(e.target.value)}
+        />
+        <button onClick={handleAddTask}>Add task</button>
+      </div>
       <div className='filter'>
         <h4>Filter Tasks</h4>
         <div className={selectedFilter === 'all' ? 'active' : ''} onClick={() => handleFilterChange('all')}>
-          All tasks
+          <p>All tasks</p>
         </div>
         <div className={selectedFilter === 'completed' ? 'active' : ''} onClick={() => handleFilterChange('completed')}>
-          Completed tasks
+          <p>Completed tasks</p>
         </div>
         <div className={selectedFilter === 'pending' ? 'active' : ''} onClick={() => handleFilterChange('pending')}>
-          Pending tasks
+          <p>Pending tasks</p>
         </div>
       </div>
     </div>
