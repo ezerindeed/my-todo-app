@@ -1,4 +1,6 @@
 import React from 'react';
+import { RiDeleteBin6Line } from "react-icons/ri";
+import { MdDoneAll } from "react-icons/md";
 
 import '../styles/Task.css'
 
@@ -15,10 +17,14 @@ const Task = ({ task, onCompleteTask, onDeleteTask }) => {
 
   return (
     <div className='task-card'>
-      <h3>{name}</h3>
-      <p>Status: {status}</p>
-      <button onClick={handleCompleteClick}>{status === 'completed' ? 'Undo' : 'Complete'}</button>
-      <button onClick={handleDeleteClick}>Delete</button>
+      <div className='task-name'>{name}</div>
+      <div className='under'>
+        <div className='task-status'>Status: {status}</div>
+        <div className='task-buttons'>
+          <MdDoneAll onClick={handleCompleteClick}>{status === 'completed' ? 'Undo' : 'Complete'}</MdDoneAll>
+          <RiDeleteBin6Line onClick={handleDeleteClick} />
+        </div>
+      </div>
     </div>
   );
 };

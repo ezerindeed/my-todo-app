@@ -20,14 +20,13 @@ const LeftPanel = ({ onAddTask, onFilterChange }) => {
 
   return (
     <div className="left-panel">
-      <h2>Add Task</h2>
       <input
         type="text"
         placeholder="Task Name"
         value={taskName}
         onChange={(e) => setTaskName(e.target.value)}
       />
-      <button onClick={handleAddTask}>Add</button>
+      <button className="add-btn" onClick={handleAddTask}>Add</button>
       <h2>Filter Tasks</h2>
       <button className={selectedFilter === 'all' ? 'active' : ''} onClick={() => handleFilterChange('all')}>
         All
