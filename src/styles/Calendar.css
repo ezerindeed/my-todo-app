@@ -76,7 +76,6 @@
   }
 
   .rbc-date-cell {
-
     text-align: center;
     border: none;
     font-size: 14px;
@@ -85,17 +84,22 @@
 
   /* Style the present day in React Big Calendar */
 .rbc-today {
-    background-color: lightblue; /* Set background color for the present day */
-    color: white;
+    background-color: #221c49; /* Set background color for the present day */
+    color: #f0f0f0;
   }
+
+.rbc-today-bg {
+    background-color: #221c49;
+}
 
   /* Style the first days of the next month in React Big Calendar */
 .rbc-off-range {
     background-color: #d0801e;
     font-size: 14px;
-    color: #888; /* Set text color for the first days of the next month */
+    color: #ddc5a8; /* Set text color for the first days of the next month */
   }  
 
   .rbc-off-range-bg {
     background: #d0801e;
+    color: #ddc5a8;
   }

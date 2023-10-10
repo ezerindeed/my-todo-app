@@ -41,6 +41,11 @@
     height: 25px;
     font-size: 18px;
 }
+
+.task-buttons .button:nth-child(1).disabled {
+    display: none;
+}
+
 .task-buttons .button:nth-child(2) {
     background-color: rgb(172, 14, 14);
     color: #c6c0c0;

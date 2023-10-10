@@ -9,3 +9,15 @@
     overflow: hidden;
     box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.1);
 }
+
+.quotes-container {
+  height: 300px;
+  width: 100%;
+  margin-top: 100px;
+  background-color: transparent;
+  color: #d0801e;
+}
+
+.quotes-container p{
+  font-size: 16px;
+}

@@ -2,33 +2,29 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const Quotes = () => {
-  const [quote, setQuote] = useState('');
+  const [quoteData, setQuoteData] = useState({
+    content: '',
+    author: '',
+  });
 
   useEffect(() => {
-    // Function to fetch a random quote
+    // Function to fetch a random quote from the Quotable API
     const fetchRandomQuote = async () => {
-      try {
-        const response = await axios.get('https://quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com/quote', {
-          params: {
-            token: 'ipworld.info'
-          },
-          headers: {
-            'X-RapidAPI-Key': '3ed78dc54amsh63cc0c93de78278p10452ajsn97d4e4ef3535',
-            'X-RapidAPI-Host': 'quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com'
-          }
-        });
+        try {
+          const response = await axios.get('https://api.quotable.io/random');
+          const { content, author } = response.data;
+          console.log('Fetched quote:', content, author);
+          setQuoteData({ content, author });
+        } catch (error) {
+          console.error('Error fetching quote:', error);
+        }
+      };
+      
 
-        // Update the state with the new quote
-        setQuote(response.data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    // Fetch a random quote initially
+    // Fetch an initial quote
     fetchRandomQuote();
 
-    // Set up an interval to fetch a new quote every 30 seconds
+    // Set an interval to fetch a new random quote every 30 seconds
     const intervalId = setInterval(() => {
       fetchRandomQuote();
     }, 30000);
@@ -40,8 +36,9 @@ const Quotes = () => {
   }, []);
 
   return (
-    <div>
-      <p>{quote}</p>
+    <div className="quotes-container">
+      <p>"{quoteData.content}"</p>
+      <p>- {quoteData.author}</p>
     </div>
   );
 };

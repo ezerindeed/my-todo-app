@@ -1,7 +1,6 @@
 import React from 'react';
 import CalendarComponent from './Calendar';
-import Quotes from './Quotes';
-
+import Quotes from './Quotes'; // Import the Quotes component
 
 import '../styles/Calendar.css'
 

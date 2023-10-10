@@ -40,6 +40,9 @@ const LeftPanel = ({ onAddTask, onFilterChange }) => {
         <div className={selectedFilter === 'pending' ? 'active' : ''} onClick={() => handleFilterChange('pending')}>
           <p>Pending tasks</p>
         </div>
+        <div className='credit'>
+          <p>by Ebenezer</p>
+        </div>
       </div>
     </div>
   );
