@@ -23,3 +23,22 @@
     top: 50%;
     left: 45%;
 }
+
+@media (max-width: 768px) {
+    .middle-panel {
+        width: 100%;
+        height: 70%;
+        padding: 0;
+    }
+
+    .middle-panel h2 {
+        margin-left: 10px;
+        font-size: 18px;
+    }
+
+    .middle-panel p {
+        top: 50%;
+        left: 35%;
+        font-size: 14px;
+    }
+}
