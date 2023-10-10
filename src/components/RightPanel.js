@@ -1,32 +1,17 @@
-import React, { useEffect, useRef } from 'react';
-import { Calendar } from '@fullcalendar/core';
-import dayGridPlugin from '@fullcalendar/daygrid';
+import React from 'react';
+import CalendarComponent from './Calendar';
+import Quotes from './Quotes';
 
-const YourCalendarComponent = () => {
-  const calendarRef = useRef(null);
 
-  useEffect(() => {
-    const calendarEl = calendarRef.current;
+import '../styles/Calendar.css'
 
-    const calendar = new Calendar(calendarEl, {
-      plugins: [dayGridPlugin],
-      initialView: 'dayGridMonth',
-      // Add more calendar configuration options here
-    });
-
-    calendar.render();
-
-    return () => {
-      // Clean up when the component unmounts
-      calendar.destroy();
-    };
-  }, []);
-
+const RightPanel = () => {
   return (
-    <div>
-      <div ref={calendarRef}></div>
+    <div className='right-panel'>
+      <CalendarComponent />
+      <Quotes />
     </div>
   );
 };
 
-export default YourCalendarComponent;
+export default RightPanel;

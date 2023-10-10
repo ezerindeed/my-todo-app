@@ -1,7 +1,6 @@
 import React from 'react';
 import Task from './Task';
 
-import '../styles/MiddlePanel.css';
 
 const MiddlePanel = ({ tasks, onCompleteTask, onDeleteTask }) => {
   return (

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-import '../styles/LeftPanel.css'
 
 const LeftPanel = ({ onAddTask, onFilterChange }) => {
   const [taskName, setTaskName] = useState('');
@@ -24,7 +23,7 @@ const LeftPanel = ({ onAddTask, onFilterChange }) => {
       <div className='add-task'>
         <input
           type="text"
-          placeholder="Task Name"
+          placeholder="Add new task"
           value={taskName}
           onChange={(e) => setTaskName(e.target.value)}
         />

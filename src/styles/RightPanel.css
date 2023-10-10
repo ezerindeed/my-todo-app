@@ -1,8 +1,11 @@
 .right-panel {
-    float: right;
+    position: relative;
     width: 20%;
+    height: 100svh;
+    padding: 20px;
     background-color: #363062; 
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.1);
 }

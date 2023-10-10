@@ -1,4 +1,12 @@
 .middle-panel {
     background-color: #221c49;
-    width: 62%;
+    padding: 20px;
+    width: 62%;  
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
+
+
+.middle-panel::-webkit-scrollbar {
+    display: none; }

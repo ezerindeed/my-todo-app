@@ -2,7 +2,6 @@ import React from 'react';
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { MdDoneAll } from "react-icons/md";
 
-import '../styles/Task.css'
 
 const Task = ({ task, onCompleteTask, onDeleteTask }) => {
   const { id, name, status } = task;

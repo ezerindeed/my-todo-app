@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
-import './App.css'; // Add your styles
+
+import './styles/LeftPanel.css'
+import './styles/MiddlePanel.css'
 import './styles/normalize.css';
+import './styles/RightPanel.css'
+import './styles/Task.css'
+import './App.css';
+
 
 import LeftPanel from './components/LeftPanel';
 import MiddlePanel from './components/MiddlePanel';

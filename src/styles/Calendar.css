@@ -1,0 +1,101 @@
+/* Custom styles for React Big Calendar */
+.rbc-calendar {
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    height: 300px;
+    background-color: #d0801e;
+  }
+
+  .rbc-month-view {
+    border: none;
+  }
+
+  .rbc-month-row {
+    border: none;
+  }
+
+  .rbc-day-cell {
+    border: none;
+  }
+
+  .rbc-day-bg {
+    border: none;
+  }
+  
+  .rbc-row-bg {
+    border: none; /* Remove borders from the day cells */
+  }
+  
+  .rbc-header {
+    background-color: #d0801e; /* Set background color for the header */
+    color: #f0f0f0; /* Set text color for the header */
+    font-size: 12px; /* Set font size for the header */
+  }
+  
+  .rbc-event {
+    background-color: #3182ce; /* Set background color for events */
+    color: #f0f0f0; /* Set text color for events */
+  }
+  
+  .rbc-event-content {
+    font-size: 12px; /* Set font size for event text */
+  }  
+
+  /* Style the header and navigation buttons in React Big Calendar */
+.rbc-header {
+    background-color: #d0801e;
+    border: none;
+    margin-bottom: 5px;
+    color: #f0f0f0; /* Set text color for the header */
+    font-size: 12px; /* Set font size for the header */
+  }
+  
+  /* Style the "back" and "next" buttons */
+  .rbc-btn-group button:not([disabled]) {
+    background-color: #d0801e;
+    border: 0.5px solid #dad9d95d;
+    color: #f0f0f0; /* Text color for active buttons */
+    font-size: 12px; /* Font size for active buttons */
+  }
+  
+  .rbc-toolbar .rbc-btn-group button:not([disabled]):hover {
+    color: #111;
+  }
+
+  .rbc-toolbar .rbc-btn-group button:not([disabled]):active, 
+  .rbc-toolbar .rbc-btn-group button:not([disabled]):focus {
+    background-color: #c77612;
+    border: none;
+  }
+
+  .rbc-toolbar-label {
+    background-color: #d0801e; /* Background color for labels */
+    color: #f0f0f0; /* Text color for labels */
+    font-size: 14px; /* Font size for labels */
+  }
+
+  .rbc-date-cell {
+
+    text-align: center;
+    border: none;
+    font-size: 14px;
+    color: #f0f0f0;
+  }
+
+  /* Style the present day in React Big Calendar */
+.rbc-today {
+    background-color: lightblue; /* Set background color for the present day */
+    color: white;
+  }
+
+  /* Style the first days of the next month in React Big Calendar */
+.rbc-off-range {
+    background-color: #d0801e;
+    font-size: 14px;
+    color: #888; /* Set text color for the first days of the next month */
+  }  
+
+  .rbc-off-range-bg {
+    background: #d0801e;
+  }

@@ -2,5 +2,8 @@
   padding: 0;
   text-align: center;
   background-color: #221c49;
+  height: 100svh;
   overflow: hidden;
+  display: flex;
+  flex-direction: row;
 }
