@@ -3,6 +3,8 @@
     padding: 20px;
     width: 62%;  
     position: relative;
+    display: flex;
+    flex-direction: column;
     overflow-y: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -13,8 +15,7 @@
 
 .middle-panel h2 {
     color: #f0f0f0;
-    position: absolute;
-    left: 5%;
+    align-self: flex-start;
 }
 
 .middle-panel p {

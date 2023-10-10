@@ -96,10 +96,10 @@
 .rbc-off-range {
     background-color: #d0801e;
     font-size: 14px;
-    color: #ddc5a8; /* Set text color for the first days of the next month */
+    color: #d1aa7abb; /* Set text color for the first days of the next month */
   }  
 
   .rbc-off-range-bg {
     background: #d0801e;
-    color: #ddc5a8;
+    color: #d1aa7abb;
   }
