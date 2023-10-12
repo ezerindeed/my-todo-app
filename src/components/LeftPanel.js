@@ -32,13 +32,13 @@ const LeftPanel = ({ onAddTask, onFilterChange }) => {
       <div className='filter'>
         <h4>Filter Tasks</h4>
         <div className={selectedFilter === 'all' ? 'active' : ''} onClick={() => handleFilterChange('all')}>
-          <p>All tasks</p>
+          <p>All <span>tasks</span></p>
         </div>
         <div className={selectedFilter === 'completed' ? 'active' : ''} onClick={() => handleFilterChange('completed')}>
-          <p>Completed tasks</p>
+          <p>Completed <span>tasks</span></p>
         </div>
         <div className={selectedFilter === 'pending' ? 'active' : ''} onClick={() => handleFilterChange('pending')}>
-          <p>Pending tasks</p>
+          <p>Pending <span>tasks</span></p>
         </div>
         <p className='credit'>
           by Ebenezer
